@@ -1,0 +1,69 @@
+webbar (12.07) precise; urgency=low
+
+  * New release.
+
+ -- Lucas R. Martins <lukasrms@gmail.com>  Tue, 03 Jul 2012 00:24:05 +0000
+
+webbar (12.06.2-public3) precise; urgency=low
+
+  * New release.
+
+ -- Lucas R. Martins <lukasrms@gmail.com>  Tue, 03 Jul 2012 00:22:40 +0000
+
+webbar (12.06.2-public2) precise; urgency=low
+
+  * New release.
+
+ -- Lucas R. Martins <lukasrms@gmail.com>  Tue, 03 Jul 2012 00:21:08 +0000
+
+webbar (12.06.2-public1ubuntu1) precise; urgency=low
+
+  * 
+
+ -- Lucas R. Martins <lucas@yocto>  Sun, 24 Jun 2012 17:59:46 -0300
+
+webbar (12.06.2-public1) precise; urgency=low
+
+  * New release.
+
+ -- Lucas R. Martins <lukasrms@gmail.com>  Sun, 24 Jun 2012 17:50:40 -0300
+
+webbar (12.06.2) precise; urgency=low
+
+  * system tray icon to show/hide main window
+  * copy to clipboard is working now
+  * creating ui preferences window and menus
+
+ -- Lucas R. Martins <lukasrms@gmail.com>  Sun, 24 Jun 2012 17:49:07 -0300
+
+webbar (12.06.1-public1ubuntu1) precise; urgency=low
+
+  * 
+
+ -- Lucas R. Martins <lucas@yocto>  Sun, 24 Jun 2012 14:46:23 -0300
+
+webbar (12.06.1-public1) precise; urgency=low
+
+  * New release.
+
+ -- Lucas R. Martins <lukasrms@gmail.com>  Sun, 24 Jun 2012 10:30:04 -0300
+
+webbar (12.06.1) precise; urgency=low
+
+  * New release.
+
+ -- Lucas R. Martins <lukasrms@gmail.com>  Sun, 24 Jun 2012 01:49:44 -0300
+
+webbar (12.06) precise; urgency=low
+
+  * Creating ubuntu package
+  * barcode is now displayed at the bottom label
+  * forced downgrade to Gtk2 (Arg!); displaying widget
+
+ -- Lucas R. Martins <lukasrms@gmail.com>  Sun, 24 Jun 2012 01:06:20 -0300
+
+webbar (0.1) precise; urgency=low
+
+  * Initial release.
+
+ -- Lucas R. Martins <lucas@yocto>  Sun, 24 Jun 2012 00:50:04 -0300

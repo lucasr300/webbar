@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Webbar
+_Comment=Webbar, a simple webcam barcode reader
+Categories=GNOME;Utility;
+Exec=webbar
+Icon=/usr/share/webbar/media/webbar.svg
+Terminal=false
+Type=Application

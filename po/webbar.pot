@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-24 17:59-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../webbar/__init__.py:35
+msgid "Show debug messages (-vv debugs webbar_lib also)"
+msgstr ""
+
+#: ../webbar.desktop.in.h:1 ../data/ui/WebbarWindow.ui.h:1
+msgid "Webbar"
+msgstr ""
+
+#: ../webbar.desktop.in.h:2
+msgid "Webbar application"
+msgstr ""
+
+#: ../data/ui/WebbarWindow.ui.h:2
+msgid "_Webbar"
+msgstr ""
+
+#: ../data/ui/WebbarWindow.ui.h:3
+msgid "_Minimize window"
+msgstr ""
+
+#: ../data/ui/WebbarWindow.ui.h:4
+msgid "_Edit"
+msgstr ""
+
+#: ../data/ui/WebbarWindow.ui.h:5
+msgid "Preferences"
+msgstr ""
+
+#: ../data/ui/WebbarWindow.ui.h:6
+msgid "_Help"
+msgstr ""
+
+#: ../data/ui/WebbarWindow.ui.h:7
+msgid "Contents"
+msgstr ""
+
+#: ../data/ui/WebbarWindow.ui.h:8
+msgid "You barcode will appear here!"
+msgstr ""
+
+#: ../data/ui/PreferencesWebbarDialog.ui.h:1
+msgid "Webbar Preferences"
+msgstr ""
+
+#: ../data/ui/PreferencesWebbarDialog.ui.h:2
+msgid "/dev/video0"
+msgstr ""
+
+#: ../data/ui/PreferencesWebbarDialog.ui.h:3
+msgid "_Video device:"
+msgstr ""
+
+#: ../data/ui/PreferencesWebbarDialog.ui.h:4
+msgid "Copy automatically to clipboard"
+msgstr ""
+
+#: ../data/ui/PreferencesWebbarDialog.ui.h:5
+msgid "Show tray icon"
+msgstr ""
+
+#: ../data/ui/PreferencesWebbarDialog.ui.h:6
+msgid "Show desktop notify"
+msgstr ""

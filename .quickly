@@ -1,0 +1,6 @@
+project = webbar
+version = 12.04
+template = ubuntu-application
+ppa = webbar
+dependencies = python-zbar, python-configobj, python-zbarpygtk
+lp_id = webbar

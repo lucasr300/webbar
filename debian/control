@@ -1,0 +1,27 @@
+Source: webbar
+Section: python
+Priority: extra
+Build-Depends: cdbs (>= 0.4.43),
+ debhelper (>= 6),
+ python (>= 2.6.6-3~),
+ python-distutils-extra (>= 2.10)
+Maintainer: Lucas R. Martins <lukasrms@gmail.com>
+Standards-Version: 3.8.3
+XS-Python-Version: current
+
+Package: webbar
+Architecture: all
+XB-Python-Version: ${python:Versions}
+Depends: ${misc:Depends},
+ ${python:Depends},
+ python-notify,
+ python-gobject-2,
+ python-launchpad-integration,
+ python-zbarpygtk,
+ python-gtk2,
+ yelp,
+ python-zbar,
+ python-configobj,
+ python-zbarpygtk
+Description: UNKNOWN
+ UNKNOWN
