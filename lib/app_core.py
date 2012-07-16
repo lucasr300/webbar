@@ -40,6 +40,27 @@ class Settings():
     def __init__(self):
 	self._config = ConfigParser.ConfigParser()
 	self.config_file = os.path.expanduser('~/.webbar.conf')
+	
+	#Fix Bug #1021329 
+	try:
+            file_for_reading = open(self.config_file,'r')
+        except IOError:
+            file_for_writing = open(self.config_file,'w')
+            
+            defaults = [
+                '[webbar]',
+                'video_device = /dev/video0',
+                'copy_automatically_to_clipboard = True',
+                'show_tray_icon = True',
+                'show_desktop_notify = True',
+            ]
+            
+            for item in defaults:
+                file_for_writing.write("%s\n" % item)
+
+        else:
+            file_for_reading.close()
+            
 	self._config.read(['data/defaults.conf',self.config_file])
 
     def get_config(self,name):
