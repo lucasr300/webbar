@@ -1,12 +1,10 @@
 Source: webbar
 Section: python
 Priority: extra
-Build-Depends: cdbs (>= 0.4.43),
- debhelper (>= 6),
- python (>= 2.6.6-3~),
+Build-Depends: debhelper (>= 8), libglib2.0-bin, python (>= 2.6.6-3~),
  python-distutils-extra (>= 2.10)
 Maintainer: Lucas R. Martins <lukasrms@gmail.com>
-Standards-Version: 3.8.3
+Standards-Version: 3.9.3
 XS-Python-Version: current
 
 Package: webbar
@@ -17,11 +15,12 @@ Depends: ${misc:Depends},
  python-notify,
  python-gobject-2,
  python-launchpad-integration,
- python-zbarpygtk,
  python-gtk2,
  yelp,
  python-zbar,
  python-configobj,
  python-zbarpygtk
-Description: UNKNOWN
- UNKNOWN
+Description: Simple app to reading barcodes with webcam.
+ To use, start the app and place your barcode on your webcam. It's
+ useful to pay bills online and organize collections, or even access
+ control.

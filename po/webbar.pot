@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-24 17:59-0300\n"
+"POT-Creation-Date: 2012-07-16 12:43-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "Webbar"
 msgstr ""
 
 #: ../webbar.desktop.in.h:2
-msgid "Webbar application"
+msgid "Webbar, a simple webcam barcode reader"
 msgstr ""
 
 #: ../data/ui/WebbarWindow.ui.h:2
@@ -54,7 +54,16 @@ msgid "Contents"
 msgstr ""
 
 #: ../data/ui/WebbarWindow.ui.h:8
-msgid "You barcode will appear here!"
+msgid ""
+"This is the <b>Webbar</b>, a webcam barcode reader.\n"
+"To use, place your barcode on your webcam.\n"
+"If Webbar isn't detecting your barcode, check if the image is blurry or too "
+"closer.\n"
+"Probably most likely, it is blurred or your webcam is <u>cheap</u>\n"
+"If Webbar detect your image, but it was unreadable, red circles will be "
+"shown in the screen.\n"
+"\n"
+"if you see green circles on the screen, <b>your barcode will appear here!</b>"
 msgstr ""
 
 #: ../data/ui/PreferencesWebbarDialog.ui.h:1

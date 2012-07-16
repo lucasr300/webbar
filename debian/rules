@@ -6,4 +6,27 @@ else
 	dh $@ --with python2
 endif
 
+override_dh_auto_install:
+	dh_auto_install -- --install-scripts=/opt/extras.ubuntu.com/webbar/bin                 --install-data=/opt/extras.ubuntu.com/webbar                 --install-lib=/opt/extras.ubuntu.com/webbar
 
+override_dh_python2:
+	dh_python2 /opt/extras.ubuntu.com/webbar
+
+
+override_dh_install:
+	dh_install
+	mkdir -p debian/webbar/opt/extras.ubuntu.com/webbar/bin
+	if [ -x debian/webbar/opt/extras.ubuntu.com/webbar/webbar/webbar ]; then mv debian/webbar/opt/extras.ubuntu.com/webbar/webbar/webbar debian/webbar/opt/extras.ubuntu.com/webbar/bin; fi
+	if [ -f debian/webbar/opt/extras.ubuntu.com/webbar/share/applications/webbar.desktop ]; then \
+		mkdir -p debian/webbar/usr/share/applications; \
+		mv debian/webbar/opt/extras.ubuntu.com/webbar/share/applications/webbar.desktop debian/webbar/usr/share/applications/extras-webbar.desktop; \
+		rmdir --ignore-fail-on-non-empty debian/webbar/opt/extras.ubuntu.com/webbar/share/applications; \
+		sed -i 's|Exec=[^ ]*|Exec=/opt/extras.ubuntu.com/webbar/bin/webbar|' debian/webbar/usr/share/applications/extras-webbar.desktop; \
+		sed -i 's|Icon=/usr/|Icon=/opt/extras.ubuntu.com/webbar/|' debian/webbar/usr/share/applications/extras-webbar.desktop; \
+	fi
+	grep -RlZ 'import gettext' debian/webbar/* | xargs -0 -r sed -i 's|\(import\) gettext$$|\1 locale|'
+	grep -RlZ 'from gettext import gettext as _' debian/webbar/* | xargs -0 -r sed -i 's|from gettext \(import gettext as _\)|from locale \1|'
+	grep -RlZ "gettext.textdomain('webbar')" debian/webbar/* | xargs -0 -r sed -i "s|gettext\(\.textdomain('webbar')\)|locale\.bindtextdomain('webbar', '/opt/extras.ubuntu.com/webbar/share/locale')\nlocale\1|" 
+	sed -i "s|__webbar_data_directory__ =.*|__webbar_data_directory__ = '/opt/extras.ubuntu.com/webbar/share/webbar/'|" debian/webbar/opt/extras.ubuntu.com/webbar/webbar*/webbarconfig.py
+	sed -i 's|        sys.path.insert(0, opt_path)|\0\n    os.putenv("XDG_DATA_DIRS", "%s:%s" % ("/opt/extras.ubuntu.com/webbar/share/", os.getenv("XDG_DATA_DIRS", "")))|' debian/webbar/opt/extras.ubuntu.com/webbar/bin/webbar
+	if [ -d debian/webbar/opt/extras.ubuntu.com/webbar/share/glib-2.0/schemas ]; then glib-compile-schemas debian/webbar/opt/extras.ubuntu.com/webbar/share/glib-2.0/schemas; fi
