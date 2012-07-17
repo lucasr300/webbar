@@ -57,6 +57,8 @@ class Settings():
             
             for item in defaults:
                 file_for_writing.write("%s\n" % item)
+                
+            file_for_writing.close()
 
         else:
             file_for_reading.close()
@@ -64,10 +66,16 @@ class Settings():
 	self._config.read(['data/defaults.conf',self.config_file])
 
     def get_config(self,name):
-	return self._config.get('webbar',name)
+        try:
+            return self._config.get('webbar',name)
+        except:
+            return '/dev/video0'
 	
     def get_boolean_config(self,name):
-	return self._config.getboolean('webbar',name)
+        try:
+            return self._config.getboolean('webbar',name)
+        except:
+            return True
 	
     def set_config(self,name,value):
 	self._config.set('webbar',name,str(value))
